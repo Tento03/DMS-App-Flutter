@@ -1,4 +1,5 @@
 import 'package:dmsapp/document/AddDocumentUser.dart';
+import 'package:dmsapp/document/ListDocumentUser.dart';
 import 'package:flutter/material.dart';
 
 class UserDashboard extends StatefulWidget {
@@ -244,7 +245,7 @@ class _UserDashboardState extends State<UserDashboard> {
         } else if (title == "List Documents") {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (_) => const AddDocumentPage()),
+            MaterialPageRoute(builder: (_) => const ListDocumentsPage()),
           );
         } else if (title == "Document Status") {
           Navigator.push(
