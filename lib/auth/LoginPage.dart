@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:dmsapp/dashboard/UserDashboard.dart';
 
 class Loginpage extends StatefulWidget {
   const Loginpage({super.key});
@@ -159,6 +160,12 @@ class _LoginpageState extends State<Loginpage> {
                             child: ElevatedButton(
                               onPressed: () {
                                 if (key.currentState!.validate()) {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => Userdashboard(),
+                                    ),
+                                  );
                                   ScaffoldMessenger.of(context).showSnackBar(
                                     SnackBar(
                                       content: Text("Login Success"),
