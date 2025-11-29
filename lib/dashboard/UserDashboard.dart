@@ -1,3 +1,4 @@
+import 'package:dmsapp/document/AddDocumentUser.dart';
 import 'package:flutter/material.dart';
 
 class UserDashboard extends StatefulWidget {
@@ -228,8 +229,44 @@ class _UserDashboardState extends State<UserDashboard> {
       selected: selected,
       selectedTileColor: Colors.white24,
       onTap: () {
+        Navigator.pop(context); // tutup drawer dulu
         setState(() => _selectedMenu = title);
-        Navigator.pop(context);
+
+        // ======== ROUTE UNTUK SEMUA MENU =========
+        if (title == "Dashboard") {
+          // Sudah di page ini, tidak perlu push
+          return;
+        } else if (title == "Upload Document") {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (_) => const AddDocumentPage()),
+          );
+        } else if (title == "List Documents") {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (_) => const AddDocumentPage()),
+          );
+        } else if (title == "Document Status") {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (_) => const AddDocumentPage()),
+          );
+        } else if (title == "Search Document") {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (_) => const AddDocumentPage()),
+          );
+        } else if (title == "Profile") {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (_) => const AddDocumentPage()),
+          );
+        } else if (title == "Settings") {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (_) => const AddDocumentPage()),
+          );
+        }
       },
     );
   }

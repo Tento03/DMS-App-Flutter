@@ -1,4 +1,3 @@
-import 'package:dmsapp/dashboard/ApproverDashboard.dart';
 import 'package:flutter/material.dart';
 import 'package:dmsapp/dashboard/UserDashboard.dart';
 
@@ -164,7 +163,7 @@ class _LoginpageState extends State<Loginpage> {
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                      builder: (context) => ApproverDashboard(),
+                                      builder: (context) => UserDashboard(),
                                     ),
                                   );
                                   ScaffoldMessenger.of(context).showSnackBar(
