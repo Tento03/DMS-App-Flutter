@@ -101,7 +101,6 @@ class _UserDashboardState extends State<UserDashboard> {
               _menuItem(Icons.dashboard_outlined, "Dashboard"),
               _menuItem(Icons.cloud_upload_outlined, "Upload Document"),
               _menuItem(Icons.folder_open, "List Documents"),
-              _menuItem(Icons.verified_outlined, "Document Status"),
               _menuItem(Icons.search, "Search Document"),
               _menuItem(Icons.person_outline, "Profile"),
               _menuItem(Icons.settings, "Settings"),
@@ -246,11 +245,6 @@ class _UserDashboardState extends State<UserDashboard> {
           Navigator.push(
             context,
             MaterialPageRoute(builder: (_) => const ListDocumentsPage()),
-          );
-        } else if (title == "Document Status") {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (_) => const AddDocumentPage()),
           );
         } else if (title == "Search Document") {
           Navigator.push(
